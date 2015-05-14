@@ -5,11 +5,39 @@
 [![License](https://img.shields.io/cocoapods/l/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
 [![Platform](https://img.shields.io/cocoapods/p/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
 
+## Description
+
+NSData-FastHex adds a category on `NSData` to convert to and from a hexadecimal
+string representation. As the name implies, it has a focus on performance,
+without sacrificing code clarity.
+
+Other implementations found online perform multiple message sends per byte and
+make additional copies of data buffers, which is wasteful.
+
+Optimization techniques:
+* `CFStringInlineBuffer` for efficient character access (fast enumeration of
+  string characters)
+* `-[NSData enumerateByteRangesUsingBlock:]` to avoid an extra copy of the
+  NSData buffer if the data isn't contiguous
+* `-initWithBytesNoCopy:…` to avoid an extra copy of the encoded and decoded
+  data and string buffers
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```objective-c
+#import "NSData-FastHex.h"
+uint8_t bytes[] = {0xDE, 0xAD, 0xBE, 0xEF, 0x42};
+NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
+NSString *hexString = [data hexString]; // => @"DEADBEEF42"
+NSData *decoded = [NSData dataWithHexString:hexString];
+```
 
-## Requirements
+```swift
+var bytes: [UInt8] = [0xDE, 0xAD, 0xBE, 0xEF, 0x42]
+var data = NSData(bytes: bytes, length: bytes.count)
+var hexString = data.hexString() // => "DEADBEEF42"
+var decoded = NSData(hexString: hexString)
+```
 
 ## Installation
 

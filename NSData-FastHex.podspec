@@ -10,20 +10,18 @@
 Pod::Spec.new do |s|
   s.name             = "NSData-FastHex"
   s.version          = "0.1.0"
-  s.summary          = "A short description of NSData-FastHex."
+  s.summary          = "Fast hexadecimal string encoding / decoding for NSData"
   s.description      = <<-DESC
-                       An optional longer description of NSData-FastHex
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
+    NSData-FastHex adds a category on `NSData` to convert to and from a
+    hexadecimal string representation. As the name implies, it has a focus on
+    performance, without sacrificing code clarity.
+    DESC
   s.homepage         = "https://github.com/jmah/NSData-FastHex"
   s.license          = 'MIT'
   s.author           = { "Jonathon Mah" => "me@JonathonMah.com" }
   s.source           = { :git => "https://github.com/jmah/NSData-FastHex.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/dev_etc'
 
-  # s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.source_files = '*.{h,m}'
