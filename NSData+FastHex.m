@@ -11,7 +11,7 @@
 
 @implementation NSData (FastHex)
 
-const uint8_t invalidNibble = UINT8_MAX;
+static const uint8_t invalidNibble = 128;
 
 static uint8_t nibbleFromChar(unichar c) {
     if (c >= '0' && c <= '9') {
