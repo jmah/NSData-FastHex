@@ -1,5 +1,5 @@
 //
-//  NSData-FastHex.h
+//  NSData+FastHex.h
 //  Pods
 //
 //  Created by Jonathon Mah on 2015-05-13.

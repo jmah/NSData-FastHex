@@ -11,23 +11,25 @@
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		66C9305416DB4DD642B32955 /* libPods-NSData-FastHex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FF41F22B5074859F068707 /* libPods-NSData-FastHex.a */; };
+		66C9305416DB4DD642B32955 /* libPods-NSData+FastHex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FF41F22B5074859F068707 /* libPods-NSData+FastHex.a */; };
+		7C5C6C0DEC6FAFCF322B1F0C /* libPods-NSData+FastHex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0621D046531AE71799C59D6A /* libPods-NSData+FastHex.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B6231C21B052E8700DD69C0 /* NSData-FastHex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData-FastHex-Bridging-Header.h"; sourceTree = "<group>"; };
+		0621D046531AE71799C59D6A /* libPods-NSData+FastHex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSData+FastHex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B6231C21B052E8700DD69C0 /* NSData+FastHex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+FastHex-Bridging-Header.h"; sourceTree = "<group>"; };
 		0B6231C31B052E8700DD69C0 /* SwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTests.swift; sourceTree = "<group>"; };
 		17FF9D158F665EC1E31F768D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		38FF41F22B5074859F068707 /* libPods-NSData-FastHex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSData-FastHex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		490193DD68D5F4A82175AA34 /* Pods-NSData-FastHex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSData-FastHex.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSData-FastHex/Pods-NSData-FastHex.release.xcconfig"; sourceTree = "<group>"; };
+		38FF41F22B5074859F068707 /* libPods-NSData+FastHex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSData+FastHex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		490193DD68D5F4A82175AA34 /* Pods-NSData+FastHex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSData+FastHex.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSData+FastHex/Pods-NSData+FastHex.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6003F5AE195388D20070C39A /* NSData-FastHex.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSData-FastHex.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* NSData+FastHex.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "NSData+FastHex.xctest"; path = "NSData+FastHex.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		8AA57BEEA5BD8254005D7D58 /* NSData-FastHex.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "NSData-FastHex.podspec"; path = "../NSData-FastHex.podspec"; sourceTree = "<group>"; };
-		8CC3FCC433E02205A68505E8 /* Pods-NSData-FastHex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSData-FastHex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NSData-FastHex/Pods-NSData-FastHex.debug.xcconfig"; sourceTree = "<group>"; };
+		8AA57BEEA5BD8254005D7D58 /* NSData+FastHex.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "NSData+FastHex.podspec"; path = "../NSData+FastHex.podspec"; sourceTree = "<group>"; };
+		8CC3FCC433E02205A68505E8 /* Pods-NSData+FastHex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSData+FastHex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NSData+FastHex/Pods-NSData+FastHex.debug.xcconfig"; sourceTree = "<group>"; };
 		FECAD6E392110267D8FD7752 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,7 +40,8 @@
 			files = (
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				66C9305416DB4DD642B32955 /* libPods-NSData-FastHex.a in Frameworks */,
+				66C9305416DB4DD642B32955 /* libPods-NSData+FastHex.a in Frameworks */,
+				7C5C6C0DEC6FAFCF322B1F0C /* libPods-NSData+FastHex.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +62,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5AE195388D20070C39A /* NSData-FastHex.xctest */,
+				6003F5AE195388D20070C39A /* NSData+FastHex.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,7 +73,8 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				38FF41F22B5074859F068707 /* libPods-NSData-FastHex.a */,
+				38FF41F22B5074859F068707 /* libPods-NSData+FastHex.a */,
+				0621D046531AE71799C59D6A /* libPods-NSData+FastHex.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,7 +92,7 @@
 		6003F5B6195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B6231C21B052E8700DD69C0 /* NSData-FastHex-Bridging-Header.h */,
+				0B6231C21B052E8700DD69C0 /* NSData+FastHex-Bridging-Header.h */,
 				6003F5B7195388D20070C39A /* Tests-Info.plist */,
 			);
 			name = "Supporting Files";
@@ -97,7 +101,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				8AA57BEEA5BD8254005D7D58 /* NSData-FastHex.podspec */,
+				8AA57BEEA5BD8254005D7D58 /* NSData+FastHex.podspec */,
 				FECAD6E392110267D8FD7752 /* README.md */,
 				17FF9D158F665EC1E31F768D /* LICENSE */,
 			);
@@ -107,8 +111,8 @@
 		7B8EEB847B33BF02F83592D7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8CC3FCC433E02205A68505E8 /* Pods-NSData-FastHex.debug.xcconfig */,
-				490193DD68D5F4A82175AA34 /* Pods-NSData-FastHex.release.xcconfig */,
+				8CC3FCC433E02205A68505E8 /* Pods-NSData+FastHex.debug.xcconfig */,
+				490193DD68D5F4A82175AA34 /* Pods-NSData+FastHex.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -116,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F5AD195388D20070C39A /* NSData-FastHex */ = {
+		6003F5AD195388D20070C39A /* NSData+FastHex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "NSData-FastHex" */;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "NSData+FastHex" */;
 			buildPhases = (
 				09F79D795C851CB095E89A6C /* Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
@@ -130,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = "NSData-FastHex";
-			productName = "NSData-FastHexTests";
-			productReference = 6003F5AE195388D20070C39A /* NSData-FastHex.xctest */;
+			name = "NSData+FastHex";
+			productName = "NSData+FastHexTests";
+			productReference = 6003F5AE195388D20070C39A /* NSData+FastHex.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +149,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jonathon Mah";
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "NSData-FastHex" */;
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "NSData+FastHex" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -158,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F5AD195388D20070C39A /* NSData-FastHex */,
+				6003F5AD195388D20070C39A /* NSData+FastHex */,
 			);
 		};
 /* End PBXProject section */
@@ -201,7 +205,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NSData-FastHex/Pods-NSData-FastHex-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NSData+FastHex/Pods-NSData+FastHex-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -293,7 +297,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CC3FCC433E02205A68505E8 /* Pods-NSData-FastHex.debug.xcconfig */;
+			baseConfigurationReference = 8CC3FCC433E02205A68505E8 /* Pods-NSData+FastHex.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -304,7 +308,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NSData-FastHex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NSData+FastHex-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -312,7 +316,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 490193DD68D5F4A82175AA34 /* Pods-NSData-FastHex.release.xcconfig */;
+			baseConfigurationReference = 490193DD68D5F4A82175AA34 /* Pods-NSData+FastHex.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -320,7 +324,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NSData-FastHex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/NSData+FastHex-Bridging-Header.h";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -328,7 +332,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "NSData-FastHex" */ = {
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "NSData+FastHex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5BD195388D20070C39A /* Debug */,
@@ -337,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "NSData-FastHex" */ = {
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "NSData+FastHex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,

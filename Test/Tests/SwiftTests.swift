@@ -1,6 +1,6 @@
 //
 //  SwiftTests.swift
-//  NSData-FastHex
+//  NSData+FastHex
 //
 //  Created by Jonathon Mah on 2015-05-14.
 //  Copyright (c) 2015 Jonathon Mah. All rights reserved.

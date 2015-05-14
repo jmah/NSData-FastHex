@@ -1,4 +1,4 @@
-# NSData-FastHex
+# NSData+FastHex
 
 [![CI Status](http://img.shields.io/travis/jmah/NSData-FastHex.svg?style=flat)](https://travis-ci.org/jmah/NSData-FastHex)
 [![Version](https://img.shields.io/cocoapods/v/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
@@ -7,7 +7,7 @@
 
 ## Description
 
-NSData-FastHex adds a category on `NSData` to convert to and from a hexadecimal
+NSData+FastHex adds a category on `NSData` to convert to and from a hexadecimal
 string representation. As the name implies, it has a focus on performance,
 without sacrificing code clarity.
 
@@ -25,7 +25,7 @@ Optimization techniques:
 ## Usage
 
 ```objective-c
-#import "NSData-FastHex.h"
+#import "NSData+FastHex.h"
 uint8_t bytes[] = {0xDE, 0xAD, 0xBE, 0xEF, 0x42};
 NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
 NSString *hexString = [data hexStringRepresentation]; // => @"DEADBEEF42"
@@ -41,11 +41,11 @@ var decoded = NSData(hexString: hexString)
 
 ## Installation
 
-NSData-FastHex is available through [CocoaPods](http://cocoapods.org). To install
+NSData+FastHex is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "NSData-FastHex"
+pod "NSData+FastHex"
 ```
 
 ## Author
@@ -54,4 +54,4 @@ Jonathon Mah, me@JonathonMah.com
 
 ## License
 
-NSData-FastHex is available under the MIT license. See the LICENSE file for more info.
+NSData+FastHex is available under the MIT license. See the LICENSE file for more info.

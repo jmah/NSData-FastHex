@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint NSData-FastHex.podspec' to ensure this is a
+# Be sure to run `pod lib lint NSData+FastHex.podspec' to ensure this is a
 # valid spec and remove all comments before submitting the spec.
 #
 # Any lines starting with a # are optional, but encouraged
@@ -8,11 +8,11 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "NSData-FastHex"
+  s.name             = "NSData+FastHex"
   s.version          = "1.0.0"
   s.summary          = "Fast hexadecimal string encoding / decoding for NSData"
   s.description      = <<-DESC
-    NSData-FastHex adds a category on `NSData` to convert to and from a
+    NSData+FastHex adds a category on `NSData` to convert to and from a
     hexadecimal string representation. As the name implies, it has a focus on
     performance, without sacrificing code clarity.
     DESC

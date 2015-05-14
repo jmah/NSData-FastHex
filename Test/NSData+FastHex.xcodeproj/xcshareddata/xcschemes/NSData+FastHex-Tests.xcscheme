@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "NSData-FastHex.xctest"
-               BlueprintName = "NSData-FastHex"
-               ReferencedContainer = "container:NSData-FastHex.xcodeproj">
+               BuildableName = "NSData+FastHex.xctest"
+               BlueprintName = "NSData+FastHex"
+               ReferencedContainer = "container:NSData+FastHex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "NSData-FastHex.xctest"
-               BlueprintName = "NSData-FastHex"
-               ReferencedContainer = "container:NSData-FastHex.xcodeproj">
+               BuildableName = "NSData+FastHex.xctest"
+               BlueprintName = "NSData+FastHex"
+               ReferencedContainer = "container:NSData+FastHex.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "NSData-FastHex.xctest"
-            BlueprintName = "NSData-FastHex"
-            ReferencedContainer = "container:NSData-FastHex.xcodeproj">
+            BuildableName = "NSData+FastHex.xctest"
+            BlueprintName = "NSData+FastHex"
+            ReferencedContainer = "container:NSData+FastHex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "NSData-FastHex.xctest"
-            BlueprintName = "NSData-FastHex"
-            ReferencedContainer = "container:NSData-FastHex.xcodeproj">
+            BuildableName = "NSData+FastHex.xctest"
+            BlueprintName = "NSData+FastHex"
+            ReferencedContainer = "container:NSData+FastHex.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "NSData-FastHex.xctest"
-            BlueprintName = "NSData-FastHex"
-            ReferencedContainer = "container:NSData-FastHex.xcodeproj">
+            BuildableName = "NSData+FastHex.xctest"
+            BlueprintName = "NSData+FastHex"
+            ReferencedContainer = "container:NSData+FastHex.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

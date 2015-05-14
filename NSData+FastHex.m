@@ -1,12 +1,12 @@
 //
-//  NSData-FastHex.m
+//  NSData+FastHex.m
 //  Pods
 //
 //  Created by Jonathon Mah on 2015-05-13.
 //
 //
 
-#import "NSData-FastHex.h"
+#import "NSData+FastHex.h"
 
 
 @implementation NSData (FastHex)
