@@ -11,35 +11,50 @@
 
 @implementation NSData (FastHex)
 
+const uint8_t invalidNibble = UINT8_MAX;
+
 static uint8_t nibbleFromChar(unichar c) {
     if (c >= '0' && c <= '9') {
         return c - '0';
     } else if (c >= 'A' && c <= 'F') {
         return 10 + c - 'A';
+    } else if (c >= 'a' && c <= 'f') {
+        return 10 + c - 'a';
     } else {
-        return UINT8_MAX;
+        return invalidNibble;
     }
 }
 
 + (instancetype)dataWithHexString:(NSString *)hexString
+{ return [self dataWithHexString:hexString ignoreOtherCharacters:YES]; }
+
++ (instancetype)dataWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters
 {
     if (!hexString) // nonnull parameter for nonnull return
         return nil;
 
-    NSParameterAssert(hexString.length % 2 == 0);
     const NSUInteger charLength = hexString.length;
-    const NSUInteger byteLength = charLength / 2;
-    uint8_t *const bytes = malloc(byteLength);
+    const NSUInteger maxByteLength = charLength / 2;
+    uint8_t *const bytes = malloc(maxByteLength);
     uint8_t *bytePtr = bytes;
 
     CFStringInlineBuffer inlineBuffer;
     CFStringInitInlineBuffer((CFStringRef)hexString, &inlineBuffer, CFRangeMake(0, charLength));
 
-    for (CFIndex i = 0; i < charLength; i += 2) {
-        uint8_t hiNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i));
-        uint8_t loNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i + 1));
+    uint8_t hiNibble = invalidNibble;
+    for (CFIndex i = 0; i < charLength; ++i) {
+        uint8_t nextNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i));
 
-        *bytePtr++ = (hiNibble << 4) + loNibble;
+        if (nextNibble == invalidNibble && !ignoreOtherCharacters) {
+            free(bytes);
+            return nil;
+        } else if (hiNibble == invalidNibble) {
+            hiNibble = nextNibble;
+        } else if (nextNibble != invalidNibble) {
+            // Have next full byte
+            *bytePtr++ = (hiNibble << 4) | nextNibble;
+            hiNibble = invalidNibble;
+        }
     }
 
     return [self dataWithBytesNoCopy:bytes length:(bytePtr - bytes) freeWhenDone:YES];

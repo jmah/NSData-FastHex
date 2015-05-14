@@ -25,6 +25,17 @@
     XCTAssertEqualObjects(hexString, @"001F3B42F0FF");
 }
 
+- (void)testDecodeOptions
+{
+    const uint8_t bytes[] = {0x00, 0x1F, 0x3B, 0x42, 0xF0, 0xFF};
+    NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
+
+    XCTAssertEqualObjects([NSData dataWithHexString:@"001F3B42F0FF" ignoreOtherCharacters:NO], data, @"Uppercase letters");
+    XCTAssertEqualObjects([NSData dataWithHexString:@"001f3b42f0ff" ignoreOtherCharacters:NO], data, @"Lowercase letters");
+    XCTAssertNil([NSData dataWithHexString:@"00 1F 3B 42 F0 FF" ignoreOtherCharacters:NO], @"nil when not ignoring non-hex characters");
+    XCTAssertEqualObjects([NSData dataWithHexString:@"00 1F 3B 42 F0 FF" ignoreOtherCharacters:YES], data, @"Ignore spaces");
+}
+
 - (NSData *)randomDataWithLength:(NSUInteger)length
 {
     uint8_t *bytes = malloc(length);
