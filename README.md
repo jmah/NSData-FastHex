@@ -1,6 +1,5 @@
 # NSData+FastHex
 
-[![CI Status](http://img.shields.io/travis/jmah/NSData-FastHex.svg?style=flat)](https://travis-ci.org/jmah/NSData-FastHex)
 [![Version](https://img.shields.io/cocoapods/v/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
 [![License](https://img.shields.io/cocoapods/l/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
 [![Platform](https://img.shields.io/cocoapods/p/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
