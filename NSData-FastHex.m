@@ -26,9 +26,9 @@ static uint8_t nibbleFromChar(unichar c) {
 }
 
 + (instancetype)dataWithHexString:(NSString *)hexString
-{ return [self dataWithHexString:hexString ignoreOtherCharacters:YES]; }
+{ return [[self alloc] initWithHexString:hexString ignoreOtherCharacters:YES]; }
 
-+ (instancetype)dataWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters
+- (nullable instancetype)initWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters
 {
     if (!hexString) // nonnull parameter for nonnull return
         return nil;
@@ -62,7 +62,7 @@ static uint8_t nibbleFromChar(unichar c) {
         return nil;
     }
 
-    return [self dataWithBytesNoCopy:bytes length:(bytePtr - bytes) freeWhenDone:YES];
+    return [self initWithBytesNoCopy:bytes length:(bytePtr - bytes) freeWhenDone:YES];
 }
 
 static char charFromNibble(uint8_t i) {

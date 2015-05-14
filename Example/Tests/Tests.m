@@ -32,24 +32,24 @@
 
     XCTAssertEqualObjects([NSData dataWithHexString:@""], [NSData data]);
 
-    XCTAssertEqualObjects([NSData dataWithHexString:@"001F3B42F0FF" ignoreOtherCharacters:NO], data, @"Uppercase letters");
-    XCTAssertEqualObjects([NSData dataWithHexString:@"001f3b42f0ff" ignoreOtherCharacters:NO], data, @"Lowercase letters");
-    XCTAssertNil([NSData dataWithHexString:@"00 1F 3B 42 F0 FF" ignoreOtherCharacters:NO], @"nil when not ignoring non-hex characters");
-    XCTAssertEqualObjects([NSData dataWithHexString:@"00 1F 3B 42 F0 FF" ignoreOtherCharacters:YES], data, @"Ignore spaces");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"001F3B42F0FF" ignoreOtherCharacters:NO], data, @"Uppercase letters");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"001f3b42f0ff" ignoreOtherCharacters:NO], data, @"Lowercase letters");
+    XCTAssertNil([[NSData alloc] initWithHexString:@"00 1F 3B 42 F0 FF" ignoreOtherCharacters:NO], @"nil when not ignoring non-hex characters");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"00 1F 3B 42 F0 FF" ignoreOtherCharacters:YES], data, @"Ignore spaces");
 }
 
 - (void)testTrailingCharacters
 {
-    XCTAssertNil([NSData dataWithHexString:@"x" ignoreOtherCharacters:NO], @"Trailing non-hex character");
-    XCTAssertEqualObjects([NSData dataWithHexString:@"x" ignoreOtherCharacters:YES], [NSData data], @"Ignore trailing non-hex character");
-    XCTAssertNil([NSData dataWithHexString:@"1" ignoreOtherCharacters:NO], @"Ignore trailing hex character");
-    XCTAssertEqualObjects([NSData dataWithHexString:@"1" ignoreOtherCharacters:YES], [NSData data], @"Ignore trailing hex character");
+    XCTAssertNil([[NSData alloc] initWithHexString:@"x" ignoreOtherCharacters:NO], @"Trailing non-hex character");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"x" ignoreOtherCharacters:YES], [NSData data], @"Ignore trailing non-hex character");
+    XCTAssertNil([[NSData alloc] initWithHexString:@"1" ignoreOtherCharacters:NO], @"Ignore trailing hex character");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"1" ignoreOtherCharacters:YES], [NSData data], @"Ignore trailing hex character");
 
     NSData *c3 = [NSData dataWithBytes:(uint8_t[]){0xc3} length:1];
-    XCTAssertNil([NSData dataWithHexString:@"c3x" ignoreOtherCharacters:NO], @"Trailing non-hex character");
-    XCTAssertEqualObjects([NSData dataWithHexString:@"c3x" ignoreOtherCharacters:YES], c3, @"Ignore trailing non-hex character");
-    XCTAssertNil([NSData dataWithHexString:@"c31" ignoreOtherCharacters:NO], @"Ignore trailing hex character");
-    XCTAssertEqualObjects([NSData dataWithHexString:@"c31" ignoreOtherCharacters:YES], c3, @"Ignore trailing hex character");
+    XCTAssertNil([[NSData alloc] initWithHexString:@"c3x" ignoreOtherCharacters:NO], @"Trailing non-hex character");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"c3x" ignoreOtherCharacters:YES], c3, @"Ignore trailing non-hex character");
+    XCTAssertNil([[NSData alloc] initWithHexString:@"c31" ignoreOtherCharacters:NO], @"Ignore trailing hex character");
+    XCTAssertEqualObjects([[NSData alloc] initWithHexString:@"c31" ignoreOtherCharacters:YES], c3, @"Ignore trailing hex character");
 }
 
 - (NSData *)randomDataWithLength:(NSUInteger)length

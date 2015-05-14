@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSData (FastHex)
 
 + (instancetype)dataWithHexString:(NSString *)hexString;
-+ (nullable instancetype)dataWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters;
+
+- (nullable instancetype)initWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters;
 
 - (NSString *)hexString;
 
