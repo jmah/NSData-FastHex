@@ -30,7 +30,7 @@ static uint8_t nibbleFromChar(unichar c) {
 
 - (nullable instancetype)initWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters
 {
-    if (!hexString) // nonnull parameter for nonnull return
+    if (!hexString)
         return nil;
 
     const NSUInteger charLength = hexString.length;
