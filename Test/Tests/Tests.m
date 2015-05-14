@@ -15,7 +15,7 @@
 
 @implementation Tests
 
-- (void)testHexRepresentation
+- (void)testHexStringRepresentation
 {
     const uint8_t bytes[] = {0x00, 0x1F, 0x3B, 0x42, 0xF0, 0xFF};
     NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
@@ -23,6 +23,10 @@
 
     NSString *hexString = [data hexStringRepresentation];
     XCTAssertEqualObjects(hexString, @"001F3B42F0FF");
+
+    NSString *lowercaseHexString = [data hexStringRepresentationUppercase:NO];
+    XCTAssertEqualObjects(lowercaseHexString, @"001f3b42f0ff");
+    XCTAssertEqualObjects(lowercaseHexString, [hexString lowercaseString]);
 }
 
 - (void)testDecodeOptions
@@ -68,6 +72,10 @@
     NSString *hexString = [data hexStringRepresentation];
     NSData *decodedData = [NSData dataWithHexString:hexString];
     XCTAssertEqualObjects(data, decodedData);
+
+    NSString *lowercaseHexString = [data hexStringRepresentationUppercase:NO];
+    NSData *decodedLowercaseData = [NSData dataWithHexString:lowercaseHexString];
+    XCTAssertEqualObjects(data, decodedLowercaseData);
 }
 
 - (void)testInstanceType

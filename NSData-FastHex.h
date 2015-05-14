@@ -32,6 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 /** Returns a string of the receiver's data bytes as uppercase hexadecimal characters. */
 - (NSString *)hexStringRepresentation;
 
+/** Returns a string of the receiver's data bytes as uppercase or lowercase hexadecimal characters.
+ *
+ * \param uppercase YES to use uppercase letters A-F; NO for lowercase a-f
+ */
+- (NSString *)hexStringRepresentationUppercase:(BOOL)uppercase;
+
 @end
 
 NS_ASSUME_NONNULL_END

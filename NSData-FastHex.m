@@ -66,12 +66,13 @@ static uint8_t nibbleFromChar(unichar c) {
     return [self initWithBytesNoCopy:bytes length:(bytePtr - bytes) freeWhenDone:YES];
 }
 
-static char charFromNibble(uint8_t i) {
-    return "0123456789ABCDEF"[i];
-}
-
 - (NSString *)hexStringRepresentation
+{ return [self hexStringRepresentationUppercase:YES]; }
+
+- (NSString *)hexStringRepresentationUppercase:(BOOL)uppercase
 {
+    const char *hexTable = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
+
     const NSUInteger byteLength = self.length;
     const NSUInteger charLength = byteLength * 2;
     char *const hexChars = malloc(charLength * sizeof(*hexChars));
@@ -81,8 +82,8 @@ static char charFromNibble(uint8_t i) {
         const uint8_t *bytePtr = bytes;
         for (NSUInteger count = 0; count < byteRange.length; ++count) {
             const uint8_t byte = *bytePtr++;
-            *charPtr++ = charFromNibble((byte >> 4) & 0xF);
-            *charPtr++ = charFromNibble(byte & 0xF);
+            *charPtr++ = hexTable[(byte >> 4) & 0xF];
+            *charPtr++ = hexTable[byte & 0xF];
         }
     }];
 
