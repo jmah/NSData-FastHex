@@ -21,7 +21,7 @@
     NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
     XCTAssertNotNil(data);
 
-    NSString *hexString = [data hexString];
+    NSString *hexString = [data hexStringRepresentation];
     XCTAssertEqualObjects(hexString, @"001F3B42F0FF");
 }
 
@@ -65,7 +65,7 @@
 {
     NSData *data = [self randomDataWithLength:4096];
     XCTAssertNotNil(data);
-    NSString *hexString = [data hexString];
+    NSString *hexString = [data hexStringRepresentation];
     NSData *decodedData = [NSData dataWithHexString:hexString];
     XCTAssertEqualObjects(data, decodedData);
 }
@@ -73,7 +73,7 @@
 - (void)testInstanceType
 {
     NSData *data = [self randomDataWithLength:16];
-    NSString *hexString = [data hexString];
+    NSString *hexString = [data hexStringRepresentation];
     XCTAssertNotNil(hexString);
 
     NSData *decodedData = [NSData dataWithHexString:hexString];
@@ -90,7 +90,7 @@
 
     [self measureBlock:^{
         for (NSInteger i = 0; i < 10000; i++) @autoreleasepool {
-            [data hexString];
+            [data hexStringRepresentation];
         }
     }];
 }
@@ -98,7 +98,7 @@
 - (void)testDecodePerformance
 {
     NSData *data = [self randomDataWithLength:4096];
-    NSString *hexString = [data hexString];
+    NSString *hexString = [data hexStringRepresentation];
     XCTAssertNotNil(data);
 
     [self measureBlock:^{

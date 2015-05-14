@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable instancetype)initWithHexString:(NSString *)hexString ignoreOtherCharacters:(BOOL)ignoreOtherCharacters;
 
 /** Returns a string of the receiver's data bytes as uppercase hexadecimal characters. */
-- (NSString *)hexString;
+- (NSString *)hexStringRepresentation;
 
 @end
 

@@ -14,7 +14,7 @@ class SwiftTests: XCTestCase {
         var bytes: [UInt8] = [0xDE, 0xAD, 0xBE, 0xEF, 0x42]
         var data = NSData(bytes: bytes, length: bytes.count)
 
-        var hexString = data.hexString()
+        var hexString = data.hexStringRepresentation()
         XCTAssertEqual(hexString, "DEADBEEF42")
 
         var decoded = NSData(hexString: hexString)

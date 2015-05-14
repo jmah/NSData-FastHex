@@ -70,7 +70,7 @@ static char charFromNibble(uint8_t i) {
     return "0123456789ABCDEF"[i];
 }
 
-- (NSString *)hexString
+- (NSString *)hexStringRepresentation
 {
     const NSUInteger byteLength = self.length;
     const NSUInteger charLength = byteLength * 2;

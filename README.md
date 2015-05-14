@@ -28,14 +28,14 @@ Optimization techniques:
 #import "NSData-FastHex.h"
 uint8_t bytes[] = {0xDE, 0xAD, 0xBE, 0xEF, 0x42};
 NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
-NSString *hexString = [data hexString]; // => @"DEADBEEF42"
+NSString *hexString = [data hexStringRepresentation]; // => @"DEADBEEF42"
 NSData *decoded = [NSData dataWithHexString:hexString];
 ```
 
 ```swift
 var bytes: [UInt8] = [0xDE, 0xAD, 0xBE, 0xEF, 0x42]
 var data = NSData(bytes: bytes, length: bytes.count)
-var hexString = data.hexString() // => "DEADBEEF42"
+var hexString = data.hexStringRepresentation() // => "DEADBEEF42"
 var decoded = NSData(hexString: hexString)
 ```
 
