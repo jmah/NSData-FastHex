@@ -15,7 +15,7 @@
 
 @implementation Tests
 
-- (void)testHexPrepresentation
+- (void)testHexRepresentation
 {
     const uint8_t bytes[] = {0x00, 0x1F, 0x3B, 0x42, 0xF0, 0xFF};
     NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
