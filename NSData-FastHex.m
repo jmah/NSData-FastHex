@@ -73,7 +73,7 @@ static char charFromNibble(uint8_t i) {
 {
     const NSUInteger byteLength = self.length;
     const NSUInteger charLength = byteLength * 2;
-    char *const hexChars = malloc(charLength * sizeof(char));
+    char *const hexChars = malloc(charLength * sizeof(*hexChars));
     __block char *charPtr = hexChars;
 
     [self enumerateByteRangesUsingBlock:^(const void *bytes, NSRange byteRange, BOOL *stop) {
