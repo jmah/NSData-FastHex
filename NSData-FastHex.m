@@ -57,6 +57,11 @@ static uint8_t nibbleFromChar(unichar c) {
         }
     }
 
+    if (hiNibble != invalidNibble && !ignoreOtherCharacters) { // trailing hex character
+        free(bytes);
+        return nil;
+    }
+
     return [self dataWithBytesNoCopy:bytes length:(bytePtr - bytes) freeWhenDone:YES];
 }
 
