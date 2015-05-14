@@ -29,14 +29,29 @@
     return commandToSend;
 }
 
+static char charFromNibble(uint8_t i) {
+    if (i < 10) {
+        return '0' + i;
+    } else {
+        return 'A' + (i - 10);
+    }
+}
+
 - (NSString *)hexString
 {
-    NSMutableString *hexString = [NSMutableString string];
+    const NSUInteger byteLength = self.length;
+    const NSUInteger charLength = byteLength * 2;
     const uint8_t *bytes = self.bytes;
-    for (NSInteger i = 0; i < self.length; ++i) {
-        [hexString appendFormat:@"%02X", bytes[i]];
+
+    char *const hexChars = malloc(charLength * sizeof(char));
+    char *charPtr = hexChars;
+    const uint8_t *bytePtr = bytes;
+    while (bytePtr < bytes + byteLength) {
+        const uint8_t byte = *bytePtr++;
+        *charPtr++ = charFromNibble((byte >> 4) & 0xF);
+        *charPtr++ = charFromNibble(byte & 0xF);
     }
-    return hexString;
+    return [[NSString alloc] initWithBytesNoCopy:hexChars length:charLength encoding:NSASCIIStringEncoding freeWhenDone:YES];
 }
 
 @end
