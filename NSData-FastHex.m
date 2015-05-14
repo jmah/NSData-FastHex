@@ -77,16 +77,18 @@ static char charFromNibble(uint8_t i) {
 {
     const NSUInteger byteLength = self.length;
     const NSUInteger charLength = byteLength * 2;
-    const uint8_t *bytes = self.bytes;
-
     char *const hexChars = malloc(charLength * sizeof(char));
-    char *charPtr = hexChars;
-    const uint8_t *bytePtr = bytes;
-    while (bytePtr < bytes + byteLength) {
-        const uint8_t byte = *bytePtr++;
-        *charPtr++ = charFromNibble((byte >> 4) & 0xF);
-        *charPtr++ = charFromNibble(byte & 0xF);
-    }
+    __block char *charPtr = hexChars;
+
+    [self enumerateByteRangesUsingBlock:^(const void *bytes, NSRange byteRange, BOOL *stop) {
+        const uint8_t *bytePtr = bytes;
+        for (NSUInteger count = 0; count < byteRange.length; ++count) {
+            const uint8_t byte = *bytePtr++;
+            *charPtr++ = charFromNibble((byte >> 4) & 0xF);
+            *charPtr++ = charFromNibble(byte & 0xF);
+        }
+    }];
+
     return [[NSString alloc] initWithBytesNoCopy:hexChars length:charLength encoding:NSASCIIStringEncoding freeWhenDone:YES];
 }
 
