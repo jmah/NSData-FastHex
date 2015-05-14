@@ -66,11 +66,7 @@ static uint8_t nibbleFromChar(unichar c) {
 }
 
 static char charFromNibble(uint8_t i) {
-    if (i < 10) {
-        return '0' + i;
-    } else {
-        return 'A' + (i - 10);
-    }
+    return "0123456789ABCDEF"[i];
 }
 
 - (NSString *)hexString

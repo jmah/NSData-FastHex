@@ -89,7 +89,7 @@
     XCTAssertNotNil(data);
 
     [self measureBlock:^{
-        for (NSInteger i = 0; i < 1000; i++) @autoreleasepool {
+        for (NSInteger i = 0; i < 10000; i++) @autoreleasepool {
             [data hexString];
         }
     }];
