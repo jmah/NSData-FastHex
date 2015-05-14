@@ -41,6 +41,7 @@ static uint8_t nibbleFromChar(unichar c) {
     CFStringInlineBuffer inlineBuffer;
     CFStringInitInlineBuffer((CFStringRef)hexString, &inlineBuffer, CFRangeMake(0, charLength));
 
+    // Each byte is made up of two hex characters; store the outstanding half-byte until we read the second
     uint8_t hiNibble = invalidNibble;
     for (CFIndex i = 0; i < charLength; ++i) {
         uint8_t nextNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i));
