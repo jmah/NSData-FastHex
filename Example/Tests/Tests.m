@@ -50,9 +50,10 @@
     XCTAssertNotNil(hexString);
 
     NSData *decodedData = [NSData dataWithHexString:hexString];
-    XCTAssert([decodedData isKindOfClass:[NSData class]]);
+    XCTAssertFalse([decodedData respondsToSelector:@selector(mutableBytes)]);
     NSMutableData *mutableData = [NSMutableData dataWithHexString:hexString];
-    XCTAssert([mutableData isKindOfClass:[NSMutableData class]]);
+    XCTAssertTrue([mutableData respondsToSelector:@selector(mutableBytes)]);
+    // -isKindOfClass:[NSMutableData class] returns true for both as a side-effect of its class cluster nature
 }
 
 - (void)testEncodePerformance
