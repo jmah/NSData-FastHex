@@ -21,7 +21,12 @@
 
 - (NSString *)hexString
 {
-    return nil;
+    NSMutableString *hexString = [NSMutableString string];
+    const uint8_t *bytes = self.bytes;
+    for (NSInteger i = 0; i < self.length; ++i) {
+        [hexString appendFormat:@"%02X", bytes[i]];
+    }
+    return hexString;
 }
 
 @end
