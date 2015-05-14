@@ -11,22 +11,38 @@
 
 @implementation NSData (FastHex)
 
+static uint8_t nibbleFromChar(unichar c) {
+    if (c >= '0' && c <= '9') {
+        return c - '0';
+    } else if (c >= 'A' && c <= 'F') {
+        return 10 + c - 'A';
+    } else {
+        return UINT8_MAX;
+    }
+}
+
 + (instancetype)dataWithHexString:(NSString *)hexString
 {
     if (!hexString) // nonnull parameter for nonnull return
         return nil;
 
-    NSMutableData *commandToSend= [[NSMutableData alloc] init];
-    unsigned char whole_byte;
-    char byte_chars[3] = {'\0','\0','\0'};
-    for (int i = 0; i < ([hexString length] / 2); i++) {
-        byte_chars[0] = [hexString characterAtIndex:i*2];
-        byte_chars[1] = [hexString characterAtIndex:i*2+1];
-        whole_byte = strtol(byte_chars, NULL, 16);
-        [commandToSend appendBytes:&whole_byte length:1];
+    NSParameterAssert(hexString.length % 2 == 0);
+    const NSUInteger charLength = hexString.length;
+    const NSUInteger byteLength = charLength / 2;
+    uint8_t *const bytes = malloc(byteLength);
+    uint8_t *bytePtr = bytes;
+
+    CFStringInlineBuffer inlineBuffer;
+    CFStringInitInlineBuffer((CFStringRef)hexString, &inlineBuffer, CFRangeMake(0, charLength));
+
+    for (CFIndex i = 0; i < charLength; i += 2) {
+        uint8_t hiNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i));
+        uint8_t loNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i + 1));
+
+        *bytePtr++ = (hiNibble << 4) + loNibble;
     }
 
-    return commandToSend;
+    return [self dataWithBytesNoCopy:bytes length:(bytePtr - bytes) freeWhenDone:YES];
 }
 
 static char charFromNibble(uint8_t i) {
