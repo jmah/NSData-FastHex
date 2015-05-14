@@ -61,9 +61,9 @@
     XCTAssertNotNil(data);
 
     [self measureBlock:^{
-        @autoreleasepool {
+        for (NSInteger i = 0; i < 1000; i++) @autoreleasepool {
             [data hexString];
-        };
+        }
     }];
 }
 
@@ -74,9 +74,9 @@
     XCTAssertNotNil(data);
 
     [self measureBlock:^{
-        @autoreleasepool {
+        for (NSInteger i = 0; i < 1000; i++) @autoreleasepool {
             [NSData dataWithHexString:hexString];
-        };
+        }
     }];
 }
 
