@@ -14,7 +14,8 @@ without sacrificing code clarity.
 Other implementations found online perform multiple message sends per byte and
 make additional copies of data buffers, which is wasteful.
 
-Optimization techniques:
+### Optimization techniques
+
 * `CFStringInlineBuffer` for efficient character access (fast enumeration of
   string characters)
 * `-[NSData enumerateByteRangesUsingBlock:]` to avoid an extra copy of the
@@ -24,6 +25,8 @@ Optimization techniques:
 
 ## Usage
 
+### Objective-C
+
 ```objective-c
 #import "NSData+FastHex.h"
 uint8_t bytes[] = {0xDE, 0xAD, 0xBE, 0xEF, 0x42};
@@ -31,6 +34,8 @@ NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
 NSString *hexString = [data hexStringRepresentation]; // => @"DEADBEEF42"
 NSData *decoded = [NSData dataWithHexString:hexString];
 ```
+
+### Swift
 
 ```swift
 var bytes: [UInt8] = [0xDE, 0xAD, 0xBE, 0xEF, 0x42]
