@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DEFD9E6D1D25781100572A69 /* NSData-FastHex.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFD9E6C1D25781100572A69 /* NSData-FastHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEFD9E6D1D25781100572A69 /* NSData_FastHex.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFD9E6C1D25781100572A69 /* NSData_FastHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEFD9E761D25782300572A69 /* NSData+FastHex.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFD9E741D25782300572A69 /* NSData+FastHex.h */; };
 		DEFD9E771D25782300572A69 /* NSData+FastHex.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFD9E751D25782300572A69 /* NSData+FastHex.m */; };
 		DEFD9E7F1D25786D00572A69 /* NSData_FastHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFD9E7E1D25786D00572A69 /* NSData_FastHexTests.m */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		DEFD9E691D25781100572A69 /* NSData_FastHex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSData_FastHex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEFD9E6C1D25781100572A69 /* NSData-FastHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData-FastHex.h"; sourceTree = "<group>"; };
+		DEFD9E6C1D25781100572A69 /* NSData_FastHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSData_FastHex.h; sourceTree = "<group>"; };
 		DEFD9E6E1D25781100572A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEFD9E741D25782300572A69 /* NSData+FastHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+FastHex.h"; sourceTree = "<group>"; };
 		DEFD9E751D25782300572A69 /* NSData+FastHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FastHex.m"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			children = (
 				DEFD9E741D25782300572A69 /* NSData+FastHex.h */,
 				DEFD9E751D25782300572A69 /* NSData+FastHex.m */,
-				DEFD9E6C1D25781100572A69 /* NSData-FastHex.h */,
+				DEFD9E6C1D25781100572A69 /* NSData_FastHex.h */,
 				DEFD9E6E1D25781100572A69 /* Info.plist */,
 			);
 			path = "NSData-FastHex";
@@ -99,7 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEFD9E6D1D25781100572A69 /* NSData-FastHex.h in Headers */,
+				DEFD9E6D1D25781100572A69 /* NSData_FastHex.h in Headers */,
 				DEFD9E761D25782300572A69 /* NSData+FastHex.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
