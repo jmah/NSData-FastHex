@@ -1,15 +1,3 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
 language: objective-c
-cache: cocoapods
-podfile: Test/Podfile
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod install --project-directory=Test
-install:
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-script:
-- set -o pipefail && xcodebuild test -workspace Test/NSData+FastHex.xcworkspace -scheme NSData+FastHex-Tests ONLY_ACTIVE_ARCH=NO | xcpretty -c
-- pod lib lint --quick
+xcode_project: NSData-FastHex.xcodeproj
+xcode_scheme: NSData-FastHexTestss
