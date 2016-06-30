@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NSData+FastHex"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "Fast hexadecimal string encoding / decoding for NSData"
   s.description      = <<-DESC
     NSData+FastHex adds a category on `NSData` to convert to and from a
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = '*.{h,m}'
+  s.source_files = 'NSData-FastHex/*.{h,m}'
 
   s.frameworks = 'Foundation'
 end

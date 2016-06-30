@@ -1,6 +1,0 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
-
-target 'NSData+FastHex', :exclusive => true do
-  pod "NSData+FastHex", :path => "../"
-end
