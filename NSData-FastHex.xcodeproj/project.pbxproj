@@ -323,7 +323,7 @@
 				INFOPLIST_FILE = "NSData-FastHex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jmah.NSData_FastHex;
+				PRODUCT_BUNDLE_IDENTIFIER = "jmah.NSData-FastHex";
 				PRODUCT_MODULE_NAME = NSData_FastHex;
 				PRODUCT_NAME = NSData_FastHex;
 				SKIP_INSTALL = YES;
@@ -340,7 +340,7 @@
 				INFOPLIST_FILE = "NSData-FastHex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jmah.NSData_FastHex;
+				PRODUCT_BUNDLE_IDENTIFIER = "jmah.NSData-FastHex";
 				PRODUCT_MODULE_NAME = NSData_FastHex;
 				PRODUCT_NAME = NSData_FastHex;
 				SKIP_INSTALL = YES;
@@ -386,6 +386,7 @@
 				DEFD9E731D25781100572A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEFD9E841D25786D00572A69 /* Build configuration list for PBXNativeTarget "NSData-FastHexTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +395,7 @@
 				DEFD9E861D25786D00572A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
