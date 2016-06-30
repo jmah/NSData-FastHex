@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
 [![License](https://img.shields.io/cocoapods/l/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
 [![Platform](https://img.shields.io/cocoapods/p/NSData-FastHex.svg?style=flat)](http://cocoapods.org/pods/NSData-FastHex)
+[![Build Status](https://travis-ci.org/mattsrobot/NSData-FastHex.svg?branch=master)](https://travis-ci.org/mattsrobot/NSData-FastHex)
 
 ## Description
 
@@ -45,11 +46,17 @@ var decoded = NSData(hexString: hexString)
 
 ## Installation
 
-NSData+FastHex is available through [CocoaPods](http://cocoapods.org). To install
+NSData+FastHex is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "NSData+FastHex"
+```
+
+Or update your Cartfile:
+
+```ruby
+github "mattsrobot/NSData-FastHex"
 ```
 
 ## Author

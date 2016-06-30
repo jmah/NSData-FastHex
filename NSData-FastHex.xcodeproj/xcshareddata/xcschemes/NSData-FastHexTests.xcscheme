@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,84 +9,76 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "NSData+FastHex.xctest"
-               BlueprintName = "NSData+FastHex"
-               ReferencedContainer = "container:NSData+FastHex.xcodeproj">
+               BlueprintIdentifier = "DEFD9E7B1D25786D00572A69"
+               BuildableName = "NSData-FastHexTests.xctest"
+               BlueprintName = "NSData-FastHexTests"
+               ReferencedContainer = "container:NSData-FastHex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Release">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "NSData+FastHex.xctest"
-               BlueprintName = "NSData+FastHex"
-               ReferencedContainer = "container:NSData+FastHex.xcodeproj">
+               BlueprintIdentifier = "DEFD9E7B1D25786D00572A69"
+               BuildableName = "NSData-FastHexTests.xctest"
+               BlueprintName = "NSData-FastHexTests"
+               ReferencedContainer = "container:NSData-FastHex.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "NSData+FastHex.xctest"
-            BlueprintName = "NSData+FastHex"
-            ReferencedContainer = "container:NSData+FastHex.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "NSData+FastHex.xctest"
-            BlueprintName = "NSData+FastHex"
-            ReferencedContainer = "container:NSData+FastHex.xcodeproj">
+            BlueprintIdentifier = "DEFD9E7B1D25786D00572A69"
+            BuildableName = "NSData-FastHexTests.xctest"
+            BlueprintName = "NSData-FastHexTests"
+            ReferencedContainer = "container:NSData-FastHex.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "NSData+FastHex.xctest"
-            BlueprintName = "NSData+FastHex"
-            ReferencedContainer = "container:NSData+FastHex.xcodeproj">
+            BlueprintIdentifier = "DEFD9E7B1D25786D00572A69"
+            BuildableName = "NSData-FastHexTests.xctest"
+            BlueprintName = "NSData-FastHexTests"
+            ReferencedContainer = "container:NSData-FastHex.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
