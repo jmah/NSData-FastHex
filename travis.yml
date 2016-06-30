@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: NSData-FastHex.xcodeproj
+xcode_scheme: NSData-FastHexTestss
