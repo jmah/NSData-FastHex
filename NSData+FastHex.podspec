@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = 'NSData-FastHex/*.{h,m}'
+  s.source_files = '*.{h,m}'
 
   s.frameworks = 'Foundation'
 end
