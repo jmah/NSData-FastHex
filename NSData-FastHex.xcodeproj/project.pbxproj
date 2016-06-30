@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DEFD9E6D1D25781100572A69 /* NSData_FastHex.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFD9E6C1D25781100572A69 /* NSData_FastHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEFD9E761D25782300572A69 /* NSData+FastHex.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFD9E741D25782300572A69 /* NSData+FastHex.h */; };
+		DEFD9E761D25782300572A69 /* NSData+FastHex.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFD9E741D25782300572A69 /* NSData+FastHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEFD9E771D25782300572A69 /* NSData+FastHex.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFD9E751D25782300572A69 /* NSData+FastHex.m */; };
 		DEFD9E7F1D25786D00572A69 /* NSData_FastHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFD9E7E1D25786D00572A69 /* NSData_FastHexTests.m */; };
 		DEFD9E811D25786D00572A69 /* NSData_FastHex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFD9E691D25781100572A69 /* NSData_FastHex.framework */; };
