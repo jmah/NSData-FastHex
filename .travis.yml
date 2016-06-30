@@ -1,3 +1,4 @@
 language: objective-c
 xcode_project: NSData-FastHex.xcodeproj
 xcode_scheme: NSData-FastHexTests
+xcode_sdk: iphonesimulator9.3
